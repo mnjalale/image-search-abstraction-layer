@@ -11,10 +11,10 @@ module.exports = function(app){
         res.sendFile(path + '/public/index.html');
     });
     
-    app.route("/api/latest/imagesearch")
+    app.route("/latest/imagesearch")
         .get(imageSearchAbstractionHandler.getLatestSearchTerms);
         
-    app.route("/api/imagesearch/:searchTerm")
+    app.route("/imagesearch/:searchTerm")
         .get(imageSearchAbstractionHandler.searchImages);
     
 };
