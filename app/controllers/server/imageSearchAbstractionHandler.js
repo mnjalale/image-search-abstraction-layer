@@ -10,6 +10,7 @@ function ImageSearchAbstractionHandler(){
         SearchTerms.find({},{"_id":false})
             .sort({ when : 'desc'})
             .select({ term:1,when:1})
+            .limit(10)
             .exec(function(err,result){
                 if(err){
                     throw err;
